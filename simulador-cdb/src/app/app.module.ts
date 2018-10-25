@@ -20,11 +20,13 @@ import {
   MatTooltipModule
 } from '@angular/material';
 import { AppRoutingModule } from './/app-routing.module';
+import { PrincipalComponent } from './principal/principal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    PrincipalComponent
   ],
   imports: [
     BrowserModule,
