@@ -1,4 +1,4 @@
-@import "mixins";
+@import "../../styles/mixins";
 
 :host(app-header) {
   padding-top: 0;
@@ -20,7 +20,7 @@
       background: $primary--color;
 
       .mat-raised-button {
-        color: $primary--color;
+        color: $secondary--color;
         margin-right: 1rem;
       }
 
@@ -45,6 +45,9 @@
       }
     }
   }
+}
+#logo{
+  width: 50%;
 }
 
 @media (max-width: 807px) {
