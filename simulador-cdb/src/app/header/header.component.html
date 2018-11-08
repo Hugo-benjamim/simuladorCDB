@@ -1,10 +1,12 @@
 <header>
     <nav>
         <div>
-            <img src="src/assets/images/logo.png" id="logo">
+            <a [routerLink]="['/']">
+                <img src="src/assets/images/logo.png" id="logo">
+            </a>
         </div>
         <div fxFlex class="text--right">
-            <a mat-raised-button *ngFor="let item of menuItems">
+            <a [routerLink]="[item?.link]" mat-raised-button *ngFor="let item of menuItems">
                     {{item.name | uppercase}}
             </a>
         </div>

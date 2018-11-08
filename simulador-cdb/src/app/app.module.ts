@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -19,14 +20,22 @@ import {
   MatSnackBarModule,
   MatTooltipModule
 } from '@angular/material';
-import { AppRoutingModule } from './/app-routing.module';
 import { PrincipalComponent } from './principal/principal.component';
+import { HomeComponent } from './home/home.component';
+import { ROUTES } from './app.routes';
+import { CdbComponent } from './cdb/cdb.component';
+import { SelicComponent } from './selic/selic.component';
+import { DolarComponent } from './dolar/dolar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    HomeComponent,
+    CdbComponent,
+    SelicComponent,
+    DolarComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +53,7 @@ import { PrincipalComponent } from './principal/principal.component';
     MatTooltipModule,
     MatListModule,
     MatDialogModule,
-    AppRoutingModule
+    RouterModule.forRoot(ROUTES),
   ],
   exports: [
     MatButtonModule,

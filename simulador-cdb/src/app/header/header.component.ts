@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  menuItems = [{link: '/', name: ('CDB')},
-  {link: '/', name: ('SELIC')},
-  {link: '/', name: ('Dólar')}
+  menuItems = [{link: '/cdb', name: ('CDB')},
+  {link: '/selic', name: ('SELIC')},
+  {link: '/dolar', name: ('Dólar')}
 ];
 
 
