@@ -3,8 +3,12 @@
     <mat-card-title>{{Elemento}}</mat-card-title>
   </mat-card-header>
 
-<mat-card-content>
-  {{Taxa}}
+<mat-card-content *ngIf="currency">
+  {{Taxa | currency:'BRL'}}
+</mat-card-content>
+
+<mat-card-content *ngIf="tax">
+{{Taxa | number:'.2':'pt'}} %
 </mat-card-content>
 
 <mat-card-actions>

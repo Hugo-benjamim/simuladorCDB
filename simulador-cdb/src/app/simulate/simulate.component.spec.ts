@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CdbComponent } from './cdb.component';
+import { SimulateComponent } from './simulate.component';
 
-describe('CdbComponent', () => {
-  let component: CdbComponent;
-  let fixture: ComponentFixture<CdbComponent>;
+describe('SimulateComponent', () => {
+  let component: SimulateComponent;
+  let fixture: ComponentFixture<SimulateComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CdbComponent ]
+      declarations: [ SimulateComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CdbComponent);
+    fixture = TestBed.createComponent(SimulateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

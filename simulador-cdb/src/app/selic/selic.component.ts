@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { SelicService } from './selic.service';
+import { ActivatedRoute } from '@angular/router';
+import { Selic } from './selic.model';
 
 @Component({
   selector: 'app-selic',
@@ -7,10 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelicComponent implements OnInit {
 
-  taxa = 6.50;
-  constructor() { }
-
+  taxas: Selic[] ;
+  taxa: number;
+  constructor(private selicService: SelicService, private route: ActivatedRoute) { }
   ngOnInit() {
+    this.selicService.selic().subscribe(items => this.taxas = items,
+      (err) => console.error(err), () => this.calculaUltimo());
   }
+  calculaUltimo() {
+    this.taxa = parseFloat(this.taxas[this.taxas.length - 1].valor);
+  }
+
 
 }

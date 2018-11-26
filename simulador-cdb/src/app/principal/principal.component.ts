@@ -8,6 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PrincipalComponent implements OnInit {
   @Input() Elemento: string;
   @Input() Taxa: number;
+  @Input() tax: boolean = true; // para identificar se o valor é uma taxa ou moeda
+  @Input() currency: boolean = false;
 
   constructor() { }
 
