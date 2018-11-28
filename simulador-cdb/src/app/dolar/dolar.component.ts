@@ -10,9 +10,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DolarComponent implements OnInit {
   taxa = 3.74898;
-
+  free: String;
   taxas: Dolar[];
-  taxa1: number; // variação
+  taxa1: number; // variação anual
   dolarAtual: number;
   dolarAnoPassado: number;
   constructor(private dolarService: DolarService, private route: ActivatedRoute) { }
@@ -26,6 +26,8 @@ export class DolarComponent implements OnInit {
     this.dolarAnoPassado = parseFloat(this.taxas[this.taxas.length - 1].ask);
     this.dolarAtual = parseFloat(this.taxas[0].ask);
     this.taxa = this.dolarAtual;
-    this.taxa1 = (this.dolarAtual / this.dolarAnoPassado) - 1;
+    this.taxa1 = ((this.dolarAtual / this.dolarAnoPassado) - 1) * 100;
+    let taxa1 = this.taxa1.toLocaleString('pt', {minimumFractionDigits: 2});
+    this.free = `Variação 12 meses: ${taxa1}%`;
   }
 }

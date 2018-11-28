@@ -7,10 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SimulateComponent implements OnInit {
 
-
+  insere: number;
   constructor() { }
 
   ngOnInit() {
   }
 
+  modelChanged(input: number) {
+    this.insere = input;
+  }
 }

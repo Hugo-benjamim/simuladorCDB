@@ -10,6 +10,7 @@ export class PrincipalComponent implements OnInit {
   @Input() Taxa: number;
   @Input() tax: boolean = true; // para identificar se o valor é uma taxa ou moeda
   @Input() currency: boolean = false;
+  @Input() free: String;
 
   constructor() { }
 

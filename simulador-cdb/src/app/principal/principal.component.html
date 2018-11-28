@@ -1,7 +1,8 @@
-<mat-card class="azul">
-  <mat-card-header>
+<mat-card class="azul"
+[class.mat-elevation-z5]="true">
+  
     <mat-card-title>{{Elemento}}</mat-card-title>
-  </mat-card-header>
+
 
 <mat-card-content *ngIf="currency">
   {{Taxa | currency:'BRL'}}
@@ -11,9 +12,12 @@
 {{Taxa | number:'.2':'pt'}} %
 </mat-card-content>
 
+<mat-card-content *ngIf="free">
+  {{free}}
+</mat-card-content>
+
 <mat-card-actions>
-  <button mat-button>Simular</button>
-  <button mat-button>Comparar</button>
+  <button mat-raised-button>Simular</button>
 </mat-card-actions>
 
 </mat-card>

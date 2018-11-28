@@ -1,4 +1,12 @@
 @import "../../styles/mixins";
 .azul{
+    margin-bottom: 1%;
     background-color: $primary--color;
+}
+.mat-raised-button {
+    background-color: $button--color;
+    color: $secondary--color;
+}
+.mat-card-content {
+    font-size: 1rem;
 }

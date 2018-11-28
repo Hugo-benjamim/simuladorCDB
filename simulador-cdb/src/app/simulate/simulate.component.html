@@ -1,3 +1,13 @@
-<p>
-  simulate works!
-</p>
+<mat-card
+[class.mat-elevation-z5]="true">
+<mat-card-title>Simulação</mat-card-title>
+
+  <mat-form-field class="example-full-width">
+    <input currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" 
+     matInput [(ngModel)]="insere" #ctrl="ngModel" (ngModelChange)="modelChanged($event)"
+      placeholder="Insira o valor da aplicação">
+  </mat-form-field>
+  <p>Após um ano, o retorno esperado será: {{insere * 1.064 | currency:'BRL'}} </p>
+
+
+</mat-card>

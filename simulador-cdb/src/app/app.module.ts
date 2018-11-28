@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -18,7 +19,8 @@ import {
   MatProgressSpinnerModule,
   MatSliderModule,
   MatSnackBarModule,
-  MatTooltipModule
+  MatTooltipModule,
+  MatNativeDateModule
 } from '@angular/material';
 import { PrincipalComponent } from './principal/principal.component';
 import { HomeComponent } from './home/home.component';
@@ -33,6 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { IpcaComponent } from './ipca/ipca.component';
 import { IPCAService } from './ipca/ipca.service';
 import { DolarService } from './dolar/dolar.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
 registerLocaleData(ptBr);
 
 @NgModule({
@@ -48,6 +52,12 @@ registerLocaleData(ptBr);
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    BrowserModule,
     MatButtonModule,
     MatMenuModule,
     MatIconModule,
@@ -61,9 +71,11 @@ registerLocaleData(ptBr);
     MatProgressSpinnerModule,
     MatTooltipModule,
     MatListModule,
+    BrowserAnimationsModule,
     MatDialogModule,
     RouterModule.forRoot(ROUTES),
-    HttpClientModule
+    HttpClientModule,
+    CurrencyMaskModule
   ],
   exports: [
     MatButtonModule,
