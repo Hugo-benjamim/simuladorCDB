@@ -1,2 +1,2 @@
 # simuladorCDB
-Pequeno projeto para coletar os valores atuais das taxas DI, SELIC e cotação do dólar para cálculos
+Pequeno projeto para coletar os valores atuais das taxas SELIC, IPCA e cotação do dólar para cálculos
